@@ -17,5 +17,6 @@ psd
 thumb
 sketch
 yarn.lock
+package-json.lock
 
 # End of https://www.toptal.com/developers/gitignore/api/react
