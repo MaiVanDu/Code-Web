@@ -3,10 +3,7 @@ import { useState } from "react";
 import Content from "./Content";
 import Home from "./Home";
 import MenuBar from "./MenuBar";
-import './style.css'
-
-
-
+import './static/css/global.css'
 
  function App() {
     return (

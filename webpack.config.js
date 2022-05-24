@@ -16,23 +16,18 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.js$/i,
                 loader: 'babel-loader',
                 exclude: /node_modules/
             },
             {
-                test: /\.css$/,
+                test: /\.css$/i,
                 exclude: /node_modules/,
                 use: [
                     { loader: 'style-loader' },
+                    
                     {
                         loader: 'css-loader',
-                        options: {
-                            modules: {
-                                localIdentName: "[name]__[local]___[hash:base64:5]",
-                            },
-                            sourceMap: true
-                        }
                     },
                     {
                         loader: 'postcss-loader',
@@ -45,6 +40,12 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.(jpg|png)$/i,
+                use: {
+                    loader: 'url-loader',
+                },
             },
         ]
     },

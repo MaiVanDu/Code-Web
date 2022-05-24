@@ -1,4 +1,5 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function MenuBar(){
     return(
        <div>
@@ -6,10 +7,10 @@ function MenuBar(){
           <nav>
             <div className="container">
               <ul>
-                <li><a href><img style={{width: '100px'}} src="img/logo1.PNG" /></a></li>
+                <li><a href><img style={{width: '100px'}} src="./static/image/logo1.PNG" /></a></li>
                 <li><input placeholder="Nhập mã hàng cần tìm kiếm" type="text" /></li>
                 <button type="submit" aria-label="Tìm kiếm" className="search-button" title="Tìm kiếm">
-                  <i className="fa-solid fa-magnifying-glass" />
+                  <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
                 </button>
                 <li><a href /><button><i className="fa-solid fa-cart-shopping" /> Giỏ hàng</button></li>
                 <li><a href>Lịch sử đơn hàng</a></li>
@@ -76,10 +77,10 @@ function MenuBar(){
             <div className="slider-content-left">
               <div className="slider-content-left-top-container">
                 <div className="slider-content-left-top">
-                  <a href><img src="img/slie1.png" /></a>
-                  <a href><img src="img/slie2.png" /></a>
-                  <a href><img src="img/slie3.png" /></a>
-                  <a href><img src="img/slie1.png" /></a>
+                  <a href><img src="./static/image/slie1.png" /></a>
+                  <a href><img src="./static/image/slie2.png" /></a>
+                  <a href><img src="./static/image/slie3.png" /></a>
+                  <a href><img src="./static/image/slie1.png" /></a>
                 </div>
                 <div className="slider-content-left-top-btn">
                   <i id="fs-left" className="fas fa-chevron-left" />
@@ -94,17 +95,17 @@ function MenuBar(){
               </div>
             </div>
             <div className="slider-content-right">
-              <li><a href><img style={{width: '320px'}} src="img/phukien1.png" /></a></li>
-              <li><a href><img style={{width: '320px'}} src="img/phukien2.png" /></a></li>
-              <li><a href><img style={{width: '320px'}} src="img/phukien3.jpg" /></a></li>
-              <li><a href><img style={{width: '320px'}} src="img/phukien4.jpg" /></a></li>                  
+              <li><a href><img style={{width: '320px'}} src="./static/image/phukien1.png" /></a></li>
+              <li><a href><img style={{width: '320px'}} src="./static/image/phukien2.png" /></a></li>
+              <li><a href><img style={{width: '320px'}} src="./static/image/phukien3.jpg" /></a></li>
+              <li><a href><img style={{width: '320px'}} src="./static/image/phukien4.jpg" /></a></li>                  
             </div>
           </div>
         </div>
       </div>
       <section className="banner-one">
         <div className="container">
-          <img style={{width: '100%'}} src="img/slie5.png" />
+          <img style={{width: '100%'}} src="./static/image/slie5.png" />
         </div>
       </section>
        </div>
