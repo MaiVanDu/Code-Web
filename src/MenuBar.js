@@ -1,5 +1,16 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Log from "./static/image/slie1.png";
+import Logo2 from "./static/image/slie3.png";
+import Logo3 from "./static/image/phukien1.png";
+import Logo4 from "./static/image/phukien2.png";
+import Logo5 from "./static/image/phukien3.jpg";
+import Logo6 from "./static/image/phukien4.jpg";
+import Logo7 from "./static/image/slie5.png";
+
+
+
+
 function MenuBar(){
     return(
        <div>
@@ -7,7 +18,7 @@ function MenuBar(){
           <nav>
             <div className="container">
               <ul>
-                <li><a href><img style={{width: '100px'}} src="./static/image/logo1.PNG" /></a></li>
+                <li><a href><img style={{width: '100px'}}  src={Log} alt="Logo" /></a></li>
                 <li><input placeholder="Nhập mã hàng cần tìm kiếm" type="text" /></li>
                 <button type="submit" aria-label="Tìm kiếm" className="search-button" title="Tìm kiếm">
                   <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
@@ -77,7 +88,7 @@ function MenuBar(){
             <div className="slider-content-left">
               <div className="slider-content-left-top-container">
                 <div className="slider-content-left-top">
-                  <a href><img src="./static/image/slie1.png" /></a>
+                  <a href><img  src={Logo2} alt="Logo2" /></a>
                   <a href><img src="./static/image/slie2.png" /></a>
                   <a href><img src="./static/image/slie3.png" /></a>
                   <a href><img src="./static/image/slie1.png" /></a>
@@ -95,17 +106,17 @@ function MenuBar(){
               </div>
             </div>
             <div className="slider-content-right">
-              <li><a href><img style={{width: '320px'}} src="./static/image/phukien1.png" /></a></li>
-              <li><a href><img style={{width: '320px'}} src="./static/image/phukien2.png" /></a></li>
-              <li><a href><img style={{width: '320px'}} src="./static/image/phukien3.jpg" /></a></li>
-              <li><a href><img style={{width: '320px'}} src="./static/image/phukien4.jpg" /></a></li>                  
+              <li><a href><img style={{width: '320px'}} src={Logo3}  /></a></li>
+              <li><a href><img style={{width: '320px'}} src={Logo4}  /></a></li>
+              <li><a href><img style={{width: '320px'}} src={Logo5}  /></a></li>
+              <li><a href><img style={{width: '320px'}} src={Logo6} /></a></li>                  
             </div>
           </div>
         </div>
       </div>
       <section className="banner-one">
         <div className="container">
-          <img style={{width: '100%'}} src="./static/image/slie5.png" />
+          <img style={{width: '100%'}} src={Logo7} />
         </div>
       </section>
        </div>
