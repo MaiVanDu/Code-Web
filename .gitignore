@@ -11,6 +11,7 @@
 # production
 /build
 
+<<<<<<< HEAD
 # misc
 .DS_Store
 .env.local
@@ -23,3 +24,12 @@ yarn-debug.log*
 yarn-error.log*
 yarn.lock
 package-lock.json
+=======
+psd
+thumb
+sketch
+yarn.lock
+package-json.lock
+
+# End of https://www.toptal.com/developers/gitignore/api/react
+>>>>>>> Update Code
