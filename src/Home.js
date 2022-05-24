@@ -1,5 +1,5 @@
 import React from "react";
-
+import Logo from "./static/image/Logo-Laptop6.jpg";
 function Home(){
     return(
         <section className="slider-product-one">
@@ -10,9 +10,9 @@ function Home(){
               </div>
               <div className="slider-product-one-content-items">
                 <div className="slider-product-one-content-item">
-                  <img src="img/Logo-Laptop6.jpg" alt="" />
+                  <img src={Logo} alt="Logo" />
                   <div className="slider-product-one-content-item-text">
-                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li><img src="./static/image/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
                     <li>Laptop Dell Gaming </li>
                     <li>Online giá rẻ</li>
                     <li><a href>25.990.000<sup>đ</sup></a></li>
@@ -28,9 +28,9 @@ function Home(){
                   </div>
                 </div>
                 <div className="slider-product-one-content-item">
-                  <img src="img/Logo-Laptop7.jpg" alt="" />
+                  <img src="./static/image/Logo-Laptop7.jpg" alt="" />
                   <div className="slider-product-one-content-item-text">
-                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li><img src="./static/image/icon1.png" alt="Logo" /><p>Trợ giá khuyến mãi</p></li>
                     <li>Laptop Dell Gaming </li>
                     <li>Online giá rẻ</li>
                     <li><a href>25.990.000<sup>đ</sup></a></li>
@@ -46,9 +46,9 @@ function Home(){
                   </div>
                 </div>
                 <div className="slider-product-one-content-item">
-                  <img src="img/Logo-Laptop3.jpg" alt="" />
+                  <img src="./static/image/Logo-Laptop3.jpg" alt="" />
                   <div className="slider-product-one-content-item-text">
-                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li><img src="./static/image/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
                     <li>Laptop Dell Gaming </li>
                     <li>Online giá rẻ</li>
                     <li><a href>25.990.000<sup>đ</sup></a></li>
@@ -64,9 +64,9 @@ function Home(){
                   </div>
                 </div>
                 <div className="slider-product-one-content-item">
-                  <img src="img/Logo-Laptop4.jpg" alt="" />
+                  <img src="./static/image/Logo-Laptop4.jpg" alt="" />
                   <div className="slider-product-one-content-item-text">
-                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li><img src="./static/image/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
                     <li>Laptop Dell Gaming </li>
                     <li>Online giá rẻ</li>
                     <li><a href>25.990.000<sup>đ</sup></a></li>
@@ -82,9 +82,9 @@ function Home(){
                   </div>
                 </div>
                 <div className="slider-product-one-content-item">
-                  <img src="img/Logo-Laptop5.jpg" alt="" />
+                  <img src="./static/image/Logo-Laptop5.jpg" alt="" />
                   <div className="slider-product-one-content-item-text">
-                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li><img src="./static/image/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
                     <li>Laptop Dell Gaming </li>
                     <li>Online giá rẻ</li>
                     <li><a href>25.990.000<sup>đ</sup></a></li>
