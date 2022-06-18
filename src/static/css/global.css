@@ -490,6 +490,9 @@ nav ul li:nth-child(4) .iconn{
    
 }
 /*-------------product gellery--------  */
+/* .product-gallery-one-content {
+    background-color: #bbbbbb;
+} */
 .product-gallery-one-content-product{
     display: flex;
     justify-content: space-between;
@@ -517,13 +520,22 @@ nav ul li:nth-child(4) .iconn{
     margin-top: 30px;
 }
 .product-gallery-one-content-title ul{
+    margin: 20px 2px;
     display: flex;
 
 }
-.product-gallery-one-content-title{
+.product-gallery-one-content-title {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 20px 0;
+    background-color: #f1eeed;
+    height:80px ;
+    border-radius: 5px;
+    
+}
+.product-gallery-one-content-title h2 {
+    margin: 30px 0 0 10px;
+    color: #2f80ed;
 }
 
 .product-gallery-one-content-title ul li a{

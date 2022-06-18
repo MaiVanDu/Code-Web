@@ -7,6 +7,7 @@ import Logo5 from "../static/image/phukien3.jpg";
 import Logo6 from "../static/image/phukien4.jpg";
 import Logo2 from "../static/image/slie3.png";
 import Logo7 from "../static/image/slie5.png";
+import Logo8 from "../static/image/tieude2.PNG";
 
 function Slider() {
   return (
@@ -18,7 +19,7 @@ function Slider() {
             <div className="slider-content-left-top-container">
               <div className="slider-content-left-top">
                 <a href>
-                  <img src={Logo2} alt="Logo2" />
+                  <img src={Logo8} alt="Logo2" />
                 </a>
                 <a href>
                   <img src="./static/image/slie2.png" />
@@ -36,10 +37,10 @@ function Slider() {
               </div>
             </div>
             <div className="slider-content-left-bottom">
-              <li className="active">Tiêu đề 1</li>
-              <li>Tiêu đề 2</li>
-              <li>Tiêu đề 3</li>
-              <li>Tiêu đề 4</li>
+              <li className="active">Khuyến mãi Lap-Top</li>
+              <li>Camera giảm cực sâu</li>
+              <li>Thiết bị mạng</li>
+              <li>Tai nge chỉ từ 9x</li>
             </div>
           </div>
           <div className="slider-content-right">
@@ -68,7 +69,7 @@ function Slider() {
       </div>
       <section className="banner-one">
         <div className="container">
-          <img style={{width: '100%'}} src={Logo7} />
+          <img style={{width: '100%' ,borderRadius:'3px'}} src={Logo7} />
         </div>
       </section>
 

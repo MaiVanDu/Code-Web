@@ -1,6 +1,7 @@
 import React from "react";
 import {  faWifi, faLaptop, faCameraRetro, faHeadphones, faMemory, faAnglesLeft, faDiagramSuccessor } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link, NavLink } from 'react-router-dom';
 
 function MenuBar(){
     return(
@@ -9,8 +10,8 @@ function MenuBar(){
         <div className="container">
           <div className="menu-bar-content">
             <ul>
-              <li><a href><FontAwesomeIcon className="fasolid" icon={ faLaptop } />Máy Tính</a></li>
-              <li><a href><FontAwesomeIcon className="fasolid" icon={ faCameraRetro } />Camera </a></li>
+              <li><Link  to="/Laptopldp"><a ><FontAwesomeIcon className="fasolid" icon={ faLaptop } />Máy Tính</a></Link> </li>
+              <li><NavLink exact activeStyle={{color:'red'}} to="/Laptopldp" className="gh"><a href><FontAwesomeIcon className="fasolid" icon={ faCameraRetro } />Camera </a></NavLink>  </li>
               <li><a href><FontAwesomeIcon className="fasolid" icon={ faWifi } />Thiết Bị Mạng </a></li>
               <li><a href><FontAwesomeIcon className="fasolid" icon={ faDiagramSuccessor} />&gt;Phụ Kiện <i className="fa-solid fa-caret-down" /> </a>
                 <div className="submenu">

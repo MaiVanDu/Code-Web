@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState , Component} from 'react';
 import { Link } from 'react-router-dom';
 import {   faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,6 +11,7 @@ import Logo4 from "../static/image/Logo-Laptop6.jpg";
 import product1 from "../static/image/product1.png";
 import product2 from "../static/image/product2.png";
 import product3 from "../static/image/product3.png";
+import Logo5 from "../static/image/slie-khuyenmai.PNG";
 import {apiProducts} from "../api/apiProducts";
 
 
@@ -329,6 +330,11 @@ function Home() {
           </div>
         </div>
       </div>
+      <section className="banner-one">
+        <div className="container">
+          <img style={{width: '100%' ,borderRadius:'3px', marginTop:'6px'}} src={Logo5} />
+        </div>
+      </section>
     </section>
     {/* ------------ product gallery--------------*/}
     <section className="product-gallery-one">
@@ -362,13 +368,12 @@ function Home() {
                 </li>
               </div>
             </div>
-            {/* {data.carddata.map((item, index) =>{
-              return(
-                <div className="product-gallery-one-content-product-item">
+            
+            <div className="product-gallery-one-content-product-item">
               <img src={Logo2} alt="" />
               <div className="slider-product-one-content-item-text">
                 <li><img src={Logo2} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                <li>{item.title }</li>
+                <li>Laptop Dell</li>
                 <li>Online giá rẻ</li>
                 <li><a href>25.990.000<sup>đ</sup></a></li>
                 <li>18.500.000<sup>đ</sup></li>
@@ -383,8 +388,7 @@ function Home() {
               </div>
             </div>
 
-              )
-            })} */}
+      
             <div className="product-gallery-one-content-product-item">
               <img src={Logo1} alt="" />
               <div className="slider-product-one-content-item-text">
