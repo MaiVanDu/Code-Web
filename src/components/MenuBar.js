@@ -1,5 +1,6 @@
 import React from "react";
-import Logo7 from "../static/image/slie5.png";
+import {  faWifi, faLaptop, faCameraRetro, faHeadphones, faMemory, faAnglesLeft, faDiagramSuccessor } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function MenuBar(){
     return(
@@ -8,10 +9,10 @@ function MenuBar(){
         <div className="container">
           <div className="menu-bar-content">
             <ul>
-              <li><a href><i className="fa-solid fa-desktop" />Máy Tính</a></li>
-              <li><a href><i className="fa-solid fa-record-vinyl" />Camera </a></li>
-              <li><a href><i className="fa-solid fa-wifi" />Thiết Bị Mạng </a></li>
-              <li><a href><i className="fa-regular fa-diagram-project" />&gt;Phụ Kiện <i className="fa-solid fa-caret-down" /> </a>
+              <li><a href><FontAwesomeIcon className="fasolid" icon={ faLaptop } />Máy Tính</a></li>
+              <li><a href><FontAwesomeIcon className="fasolid" icon={ faCameraRetro } />Camera </a></li>
+              <li><a href><FontAwesomeIcon className="fasolid" icon={ faWifi } />Thiết Bị Mạng </a></li>
+              <li><a href><FontAwesomeIcon className="fasolid" icon={ faDiagramSuccessor} />&gt;Phụ Kiện <i className="fa-solid fa-caret-down" /> </a>
                 <div className="submenu">
                   <ul>
                     <li><a href>Dây Cáp</a> </li>
@@ -35,8 +36,8 @@ function MenuBar(){
                   </ul>
                 </div>
               </li>
-              <li><a href><i className="fa-solid fa-headphones" />Loa, Tai nghe </a></li>
-              <li><a href><i className="fa-solid fa-sd-card" />Thiết Bị Lưu Trữ </a>
+              <li><a href><FontAwesomeIcon className="fasolid" icon={ faHeadphones } />Loa, Tai nghe </a></li>
+              <li><a href><FontAwesomeIcon className="fasolid" icon={ faMemory } />Thiết Bị Lưu Trữ </a>
                 <div className="submenu-data">
                   <ul>
                     <li><a href>Thẻ Nhớ 32GB</a> </li>
@@ -50,16 +51,12 @@ function MenuBar(){
                   </ul>
                 </div>
               </li>
-              <li><a href><i className="fa-light fa-atom" />Khuyến Mại </a></li>  
+              <li><a href><FontAwesomeIcon className="fasolid" icon={ faAnglesLeft } />Khuyến Mại </a></li>  
             </ul>
           </div>
         </div>
       </section>
-      <section className="banner-one">
-        <div className="container">
-          <img style={{width: '100%'}} src={Logo7} />
-        </div>
-      </section>
+      
        </div>  
     )
 }

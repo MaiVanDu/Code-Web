@@ -1,36 +1,353 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import {   faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MainContent from '../Layout/MainContent';
-import Icon from "../static/image/icon-sale.png";
-import Logo from "../static/image/Laptop7.jpg";
+import khuyenmai from "../static/image/khuyenmaisoc2.PNG";
 import Logo1 from "../static/image/Logo-Laptop3.jpg";
 import Logo2 from "../static/image/Logo-Laptop4.jpg";
 import Logo3 from "../static/image/Logo-Laptop5.jpg";
 import Logo4 from "../static/image/Logo-Laptop6.jpg";
+import product1 from "../static/image/product1.png";
+import product2 from "../static/image/product2.png";
+import product3 from "../static/image/product3.png";
 import {apiProducts} from "../api/apiProducts";
+
+
 function Home() {
+  const [noOfElement, setnoOfElement] = useState(5);
+  const loadMore = () =>{
+    setnoOfElement(noOfElement + noOfElement);
+  }
+
+  // const slice = data.carddata.slice(0, noOfElement);
   const [products, setProducts] = useState([]);
   const fetchDataProducts = async () => {
     const { data: products } = await apiProducts.getProducts();
     if (products) {
       setProducts(products);
+      
     }
+
   }
+  console.log(products);
   useEffect(() => {
     fetchDataProducts();
   }, []);
   
   return (
-    <MainContent><section className="slider-product-one">
+    <MainContent> {/* Slider- product */}
+    <section className="slider-product-one">
       <div className="container">
         <div className="slider-product-one-content">
           <div className="slider-product-one-content-title">
             <h2> Săn Sale mỗi ngày</h2>
           </div>
-          <div className="slider-product-one-content-items">
-            <div className="slider-product-one-content-item">
-              <img src={Logo} alt="Logo" />
+          <div className="slider-product-one-content-container">
+            <div className="slider-product-one-content-items-content">
+              <div className="slider-product-one-content-items">
+                <div className="slider-product-one-content-item"  >
+                  <Link  to="/subPage1"><a><img className='slider-image' src={Logo1} ></img></a> </Link>
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src={Logo1}  alt=""  /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a >25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+                <div className="slider-product-one-content-item">
+                <Link  to="/subPage1"><a><img className='slider-image' src={Logo2} ></img></a> </Link>
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+                <div className="slider-product-one-content-item">
+                <Link  to="/subPage1"><a><img className='slider-image' src={Logo3} ></img></a> </Link>
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+                <div className="slider-product-one-content-item">
+                <Link  to="/subPage1"><a><img className='slider-image' src={Logo4} ></img></a> </Link>
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+                <div className="slider-product-one-content-item">
+                <Link  to="/subPage1"><a><img className='slider-image' src={Logo2} ></img></a> </Link>
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="slider-product-one-content-items">
+                <div className="slider-product-one-content-item">
+                  <img src="img/Logo-Laptop6.jpg" alt="" />
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+                <div className="slider-product-one-content-item">
+                  <img src="img/Logo-Laptop7.jpg" alt="" />
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+                <div className="slider-product-one-content-item">
+                  <img src="img/Logo-Laptop3.jpg" alt="" />
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+                <div className="slider-product-one-content-item">
+                  <img src="img/Logo-Laptop4.jpg" alt="" />
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+                <div className="slider-product-one-content-item">
+                  <img src="img/Logo-Laptop5.jpg" alt="" />
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+              </div>
+              <div className="slider-product-one-content-items">
+                <div className="slider-product-one-content-item">
+                  <img src="img/Logo-Laptop6.jpg" alt="" />
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+                <div className="slider-product-one-content-item">
+                  <img src="img/Logo-Laptop7.jpg" alt="" />
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+                <div className="slider-product-one-content-item">
+                  <img src="img/Logo-Laptop3.jpg" alt="" />
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+                <div className="slider-product-one-content-item">
+                  <img src="img/Logo-Laptop4.jpg" alt="" />
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+                <div className="slider-product-one-content-item">
+                  <img src="img/Logo-Laptop5.jpg" alt="" />
+                  <div className="slider-product-one-content-item-text">
+                    <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                    <li>Laptop Dell Gaming </li>
+                    <li>Online giá rẻ</li>
+                    <li><a href>25.990.000<sup>đ</sup></a></li>
+                    <li>18.500.000<sup>đ</sup></li>
+                    <li>Quà tặng 400.000<sup>đ</sup></li>
+                    <li>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                    </li>
+                  </div>
+                </div>
+              </div> */}
+            </div>
+            <div className="slider-product-one-content-btn">
+              <FontAwesomeIcon className='i' icon={faAngleLeft} />
+              <FontAwesomeIcon className='i' icon={faAngleRight} />
+            </div>             
+          </div>
+        </div>
+      </div>
+    </section>
+    {/* ------------ product gallery--------------*/}
+    <section className="product-gallery-one">
+      <div className="container">
+        <div className="product-gallery-one-content">
+          <div className="product-gallery-one-content-title">
+            <h2>Sản Phẩm Nổi Bật Nhất</h2>
+            <ul>
+              <li><a>Camera Imou</a></li>
+              <li><a>WiFi TOTOLINK</a></li>
+              <li><a>Switch</a></li>
+              <li><a>Tai Nghe</a></li>
+            </ul>
+          </div>
+          <div className="product-gallery-one-content-product">
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo3} alt="" />
               <div className="slider-product-one-content-item-text">
-                <li><img src={Icon} alt="Logo1" /><p>Trợ giá khuyến mãi</p></li>
+                <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
                 <li>Laptop Dell Gaming </li>
                 <li>Online giá rẻ</li>
                 <li><a href>25.990.000<sup>đ</sup></a></li>
@@ -45,10 +362,33 @@ function Home() {
                 </li>
               </div>
             </div>
-            <div className="slider-product-one-content-item">
-              <img src={Logo2} alt="Logo2" />
+            {/* {data.carddata.map((item, index) =>{
+              return(
+                <div className="product-gallery-one-content-product-item">
+              <img src={Logo2} alt="" />
               <div className="slider-product-one-content-item-text">
-                <li><img src={Icon} alt="Logo3" /><p>Trợ giá khuyến mãi</p></li>
+                <li><img src={Logo2} alt="" /><p>Trợ giá khuyến mãi</p></li>
+                <li>{item.title }</li>
+                <li>Online giá rẻ</li>
+                <li><a href>25.990.000<sup>đ</sup></a></li>
+                <li>18.500.000<sup>đ</sup></li>
+                <li>Quà tặng 400.000<sup>đ</sup></li>
+                <li>
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                </li>
+              </div>
+            </div>
+
+              )
+            })} */}
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo1} alt="" />
+              <div className="slider-product-one-content-item-text">
+                <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
                 <li>Laptop Dell Gaming </li>
                 <li>Online giá rẻ</li>
                 <li><a href>25.990.000<sup>đ</sup></a></li>
@@ -63,10 +403,11 @@ function Home() {
                 </li>
               </div>
             </div>
-            <div className="slider-product-one-content-item">
-              <img src={Logo1} alt="Logo1" />
+            
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo1} alt="" />
               <div className="slider-product-one-content-item-text">
-                <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
+                <li><img src={Logo1} alt="" /><p>Trợ giá khuyến mãi</p></li>
                 <li>Laptop Dell Gaming </li>
                 <li>Online giá rẻ</li>
                 <li><a href>25.990.000<sup>đ</sup></a></li>
@@ -81,10 +422,10 @@ function Home() {
                 </li>
               </div>
             </div>
-            <div className="slider-product-one-content-item">
-              <img src={Logo3} alt="Logo3" />
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo3} alt="" />
               <div className="slider-product-one-content-item-text">
-                <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
+                <li><img src={Logo3} alt="" /><p>Trợ giá khuyến mãi</p></li>
                 <li>Laptop Dell Gaming </li>
                 <li>Online giá rẻ</li>
                 <li><a href>25.990.000<sup>đ</sup></a></li>
@@ -99,10 +440,10 @@ function Home() {
                 </li>
               </div>
             </div>
-            <div className="slider-product-one-content-item">
-              <img src={Logo4} alt="Logo4" />
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo4} alt="" />
               <div className="slider-product-one-content-item-text">
-                <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
+                <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
                 <li>Laptop Dell Gaming </li>
                 <li>Online giá rẻ</li>
                 <li><a href>25.990.000<sup>đ</sup></a></li>
@@ -115,356 +456,249 @@ function Home() {
                   <i className="fa-solid fa-star" />
                   <i className="fa-solid fa-star" />
                 </li>
+              </div>
+            </div>
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo3} alt="" />
+              <div className="slider-product-one-content-item-text">
+                <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                <li>Laptop Dell Gaming </li>
+                <li>Online giá rẻ</li>
+                <li><a href>25.990.000<sup>đ</sup></a></li>
+                <li>18.500.000<sup>đ</sup></li>
+                <li>Quà tặng 400.000<sup>đ</sup></li>
+                <li>
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                </li>
+              </div>
+            </div>
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo1} alt="" />
+              <div className="slider-product-one-content-item-text">
+                <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                <li>Laptop Dell Gaming </li>
+                <li>Online giá rẻ</li>
+                <li><a href>25.990.000<sup>đ</sup></a></li>
+                <li>18.500.000<sup>đ</sup></li>
+                <li>Quà tặng 400.000<sup>đ</sup></li>
+                <li>
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                </li>
+              </div>
+            </div>
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo3} alt="" />
+              <div className="slider-product-one-content-item-text">
+                <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                <li>Laptop Dell Gaming </li>
+                <li>Online giá rẻ</li>
+                <li><a href>25.990.000<sup>đ</sup></a></li>
+                <li>18.500.000<sup>đ</sup></li>
+                <li>Quà tặng 400.000<sup>đ</sup></li>
+                <li>
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                </li>
+              </div>
+            </div>
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo4} alt="" />
+              <div className="slider-product-one-content-item-text">
+                <li><img src="img/logo1.PNG" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                <li>Laptop Dell Gaming </li>
+                <li>Online giá rẻ</li>
+                <li><a href>25.990.000<sup>đ</sup></a></li>
+                <li>18.500.000<sup>đ</sup></li>
+                <li>Quà tặng 400.000<sup>đ</sup></li>
+                <li>
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                </li>
+              </div>
+            </div>
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo2} alt="" />
+              <div className="slider-product-one-content-item-text">
+                <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                <li>Laptop Dell Gaming </li>
+                <li>Online giá rẻ</li>
+                <li><a href>25.990.000<sup>đ</sup></a></li>
+                <li>18.500.000<sup>đ</sup></li>
+                <li>Quà tặng 400.000<sup>đ</sup></li>
+                <li>
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                </li>
+              </div>
+            </div>
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo2} alt="" />
+              <div className="slider-product-one-content-item-text">
+                <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                <li>Laptop Dell Gaming </li>
+                <li>Online giá rẻ</li>
+                <li><a href>25.990.000<sup>đ</sup></a></li>
+                <li>18.500.000<sup>đ</sup></li>
+                <li>Quà tặng 400.000<sup>đ</sup></li>
+                <li>
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                </li>
+              </div>
+            </div>
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo4} alt="" />
+              <div className="slider-product-one-content-item-text">
+                <li><img src="img/camera4.jpg" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                <li>Laptop Dell Gaming </li>
+                <li>Online giá rẻ</li>
+                <li><a href>25.990.000<sup>đ</sup></a></li>
+                <li>18.500.000<sup>đ</sup></li>
+                <li>Quà tặng 400.000<sup>đ</sup></li>
+                <li>
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                </li>
+              </div>
+            </div>
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo3} alt="" />
+              <div className="slider-product-one-content-item-text">
+                <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                <li>Laptop Dell Gaming </li>
+                <li>Online giá rẻ</li>
+                <li><a href>25.990.000<sup>đ</sup></a></li>
+                <li>18.500.000<sup>đ</sup></li>
+                <li>Quà tặng 400.000<sup>đ</sup></li>
+                <li>
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                </li>
+              </div>
+            </div>
+            <div className="product-gallery-one-content-product-item">
+              <img src={Logo2} alt="" />
+              <div className="slider-product-one-content-item-text">
+                <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
+                <li>Laptop Dell Gaming </li>
+                <li>Online giá rẻ</li>
+                <li><a href>25.990.000<sup>đ</sup></a></li>
+                <li>18.500.000<sup>đ</sup></li>
+                <li>Quà tặng 400.000<sup>đ</sup></li>
+                <li>
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                  <i className="fa-solid fa-star" />
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button 
+          className="readmore-btn"
+          onClick={() => loadMore()}
+
+        > Xem Thêm</button>
+      </div></section>
+    {/*    ---       Product gallery two*/}
+    <section className="product-gallery-two">
+      <div className="container">
+        <div className="product-gallery-two-content">
+          <div className="product-gallery-two-content-right">
+            <img style={{height: '550px', borderRadius: '5px'}} src={khuyenmai} alt="" />
+          </div>
+          <div className="product-gallery-two-content-left">
+            <div className="product-gallery-two-content-left-top">
+              <li className="active">Lap Top Gamming</li>
+              <li>Laptop Học Tập, Văn Phòng</li>
+              <li>LapTop mỏng nhẹ</li>
+              <li>Laptop cao cấp, sang trọng</li>
+              <li><a>Xem Thêm</a><i className="fa-solid fa-angle-right" /></li>
+            </div>
+            <div className="product-gallery-two-content-left-bottom">
+              <div className="product-gallery-two-content-left-bottom-item">
+                <img src={Logo1} alt="" />
+                <div className="product-gallery-two-content-left-bottom-item-text">
+                  <li>Tên Lap</li>
+                  <li>Hàng Khuyến Mãi</li>
+                  <li>Giá</li>
+                  <li>Ưu đãi khủng</li>
+                </div>
+              </div>
+              <div className="product-gallery-two-content-left-bottom-item">
+                <img src={Logo2} alt="" />
+                <div className="product-gallery-two-content-left-bottom-item-text">
+                  <li>Tên Lap</li>
+                  <li>Hàng Khuyến Mãi</li>
+                  <li>Giá</li>
+                  <li>Ưu đãi khủng</li>
+                </div>
+              </div>
+              <div className="product-gallery-two-content-left-bottom-item">
+                <img src={Logo3} alt="" />
+                <div className="product-gallery-two-content-left-bottom-item-text">
+                  <li>Tên Lap</li>
+                  <li>Hàng Khuyến Mãi</li>
+                  <li>Giá</li>
+                  <li>Ưu đãi khủng</li>
+                </div>
+              </div>
+              <div className="product-gallery-two-content-left-bottom-item">
+                <img src={Logo4} alt="" />
+                <div className="product-gallery-two-content-left-bottom-item-text">
+                  <li>Tên Lap</li>
+                  <li>Hàng Khuyến Mãi</li>
+                  <li>Giá</li>
+                  <li>Ưu đãi khủng</li>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-      {/* ------------ product gallery--------------*/}
-      <section className="product-gallery-one">
-        <div className="container">
-          <div className="product-gallery-one-content">
-            <div className="product-gallery-one-content-title">
-              <h2>Sản Phẩm Nổi Bật Nhất</h2>
-              <ul>
-                <li><a>Camera Imou</a></li>
-                <li><a>WiFi TOTOLINK</a></li>
-                <li><a>Switch</a></li>
-                <li><a>Tai Nghe</a></li>
-              </ul>
-            </div>
-            <div className="product-gallery-one-content-product">
-              <div className="product-gallery-one-content-product-item">
-                <img src="img/webcam1.jpg" alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src="img/camera2.jpg" alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src="img/kíchong.jpg" alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src="img/webcam1.jpg" alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src="img/camera7.jpg" alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src="img/camera1.jpg" alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src="img/camera6.jpg" alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src="img/camera2.jpg" alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src="img/thietBiMang.jpg" alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src="img/tainghe.jpeg" alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src="img/webcam1.jpg" alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src="img/camera4.jpg" alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src="img/webcam1.jpg" alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src={Icon} alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src={Icon} alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-              <div className="product-gallery-one-content-product-item">
-                <img src={Icon} alt="" />
-                <div className="slider-product-one-content-item-text">
-                  <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
-                  <li>Laptop Dell Gaming </li>
-                  <li>Online giá rẻ</li>
-                  <li><a href>25.990.000<sup>đ</sup></a></li>
-                  <li>18.500.000<sup>đ</sup></li>
-                  <li>Quà tặng 400.000<sup>đ</sup></li>
-                  <li>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </li>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div></section>
-      {/*    ---       Product gallery two*/}
-      <section className="product-gallery-two">
-        <div className="container">
-          <div className="product-gallery-two-content">
-            <div className="product-gallery-two-content-right">
-              <img src="img/slieKhuyenmai.PNG" alt="" />
-            </div>
-            <div className="product-gallery-two-content-left">
-              <div className="product-gallery-two-content-left-top">
-                <li className="active">Lap Top Gamming</li>
-                <li>Laptop Học Tập, Văn Phòng</li>
-                <li>LapTop mỏng nhẹ</li>
-                <li>Laptop cao cấp, sang trọng</li>
-                <li><a>Xem Thêm</a><i className="fa-solid fa-angle-right" /></li>
-              </div>
-              <div className="product-gallery-two-content-left-bottom">
-                <div className="product-gallery-two-content-left-bottom-item">
-                  <img src="img/Logo-Laptop2.jpg" alt="" />
-                  <div className="product-gallery-two-content-left-bottom-item-text">
-                    <li>Tên Lap</li>
-                    <li>Hàng Khuyến Mãi</li>
-                    <li>Giá</li>
-                    <li>Ưu đãi khủng</li>
-                  </div>
-                </div>
-                <div className="product-gallery-two-content-left-bottom-item">
-                  <img src="img/Logo-Laptop2.jpg" alt="" />
-                  <div className="product-gallery-two-content-left-bottom-item-text">
-                    <li>Tên Lap</li>
-                    <li>Hàng Khuyến Mãi</li>
-                    <li>Giá</li>
-                    <li>Ưu đãi khủng</li>
-                  </div>
-                </div>
-                <div className="product-gallery-two-content-left-bottom-item">
-                  <img src="img/Logo-Laptop3.jpg" alt="" />
-                  <div className="product-gallery-two-content-left-bottom-item-text">
-                    <li>Tên Lap</li>
-                    <li>Hàng Khuyến Mãi</li>
-                    <li>Giá</li>
-                    <li>Ưu đãi khủng</li>
-                  </div>
-                </div>
-                <div className="product-gallery-two-content-left-bottom-item">
-                  <img src="img/Logo-Laptop7.jpg" alt="" />
-                  <div className="product-gallery-two-content-left-bottom-item-text">
-                    <li>Tên Lap</li>
-                    <li>Hàng Khuyến Mãi</li>
-                    <li>Giá</li>
-                    <li>Ưu đãi khủng</li>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    {/*Category product*/}
+    <section className="Category-product">
+      <div className="container">
+        <div className="shopping-trends">
+          <strong className="name-box">Xu hướng mua sắm</strong>
+          <ul>
+            <li><a><img src={product1} alt="" /><span> Điện thoại</span><strong>Giảm đến 50%</strong></a></li>
+            <li><a><img src={product2} alt="" /><span>Máy Tính</span><strong>Giảm đến 40%</strong></a></li>
+            <li><a><img src={product3} alt="" /><span>Tai-Nghe</span><strong>Giảm đến 30%</strong></a></li>
+            <li><a><img src={product2} alt="" /><span>Phụ Kiện</span><strong>Giảm đến 10%</strong></a></li>
+          </ul>
         </div>
-      </section>
+      </div>
+    </section>
     </MainContent>
   )
 }
