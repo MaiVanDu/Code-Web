@@ -9,7 +9,8 @@ const axiosClient = axios.create({ baseURL: API_URL, paramsSerializer: params =>
 	'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
 	'Access-Control-Allow-Origin': '*',
 	'Content-Type': 'application/json',
-	'X-Requested-With': 'XMLHttpRequest'
+	'X-Requested-With': 'XMLHttpRequest',
+	'Authorization' : 'Bearer ' + localStorage.getItem('token')
 } });
 axiosClient.interceptors.response.use(
 	response => {

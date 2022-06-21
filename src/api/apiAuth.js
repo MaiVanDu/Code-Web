@@ -2,7 +2,7 @@ import axiosClient from "./axiosClient";
 
 export const apiAuth = {
   login: (params) => {
-    return axiosClient.get("/products", { params });
+    return axiosClient.post("/sign-in", params );
   },
   register: ({username, password, re_password, email}) => {
     const url = `/sign-up`;

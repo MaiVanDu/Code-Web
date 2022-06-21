@@ -1,8 +1,8 @@
 import React from 'react'
 import { Routes, Route, Link } from "react-router-dom";
-import Registration from '../auth/Registration';
+import Registration from '../pages/auth/Registration';
 import Home from '../pages/Home';
-import Login from '../auth/Login';
+import Login from '../pages/auth/Login';
 import SubPage1 from '../pages/SubPage1';
 import ContentSale from '../components/ContentSale';
 

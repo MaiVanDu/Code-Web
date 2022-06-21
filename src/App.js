@@ -1,6 +1,6 @@
 import './static/css/app.css';
 import './static/css/global.css';
-import './auth/index.css';
+import './pages/auth/index.css';
 
 import { BrowserRouter } from "react-router-dom";
 import RouterClient from './router/RouterClient';
