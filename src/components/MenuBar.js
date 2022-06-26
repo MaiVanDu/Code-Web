@@ -11,7 +11,7 @@ function MenuBar(){
           <div className="menu-bar-content">
             <ul>
               <li><Link  to="/Laptopldp"><a ><FontAwesomeIcon className="fasolid" icon={ faLaptop } />Máy Tính</a></Link> </li>
-              <li><NavLink exact activeStyle={{color:'red'}} to="/Laptopldp" className="gh"><a href><FontAwesomeIcon className="fasolid" icon={ faCameraRetro } />Camera </a></NavLink>  </li>
+              <li><NavLink exact activeStyle={{color:'red'}} to="/Camera" className="gh"><a href><FontAwesomeIcon className="fasolid" icon={ faCameraRetro } />Camera </a></NavLink>  </li>
               <li><a href><FontAwesomeIcon className="fasolid" icon={ faWifi } />Thiết Bị Mạng </a></li>
               <li><a href><FontAwesomeIcon className="fasolid" icon={ faDiagramSuccessor} />&gt;Phụ Kiện <i className="fa-solid fa-caret-down" /> </a>
                 <div className="submenu">

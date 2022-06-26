@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import {  faSearch, faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from "../static/image/logo.jpg";
+import { Link, NavLink } from 'react-router-dom';
+import Home from '../pages/Home';
 import Registration from '../pages/auth/Registration';
 import Login from '../pages/auth/Login';
 function Header() {
@@ -14,7 +16,7 @@ function Header() {
 					<ul>
 						<li>
 							<a href>
-								<img  style={{ width: "80px"  }} src={Logo} alt="Logo" />
+							<Link  to="/"><img  style={{ width: "80px"  }} src={Logo} alt="Logo" /></Link>
 							</a>
 						</li>
 						<li>

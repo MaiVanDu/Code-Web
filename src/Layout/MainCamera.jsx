@@ -1,20 +1,23 @@
-import React from 'react'
+import React from 'react';
 import Header from '../components/Header';
 import MenuBar from '../components/MenuBar';
-import Slider from '../components/Slider';
 import Footer from '../components/Footer';
+import Slider from '../components/Slider';
+import SaleLaptop from '../components/SaleLaptop';
 import ShoppingTrends from '../components/ShoppingTrends';
-function MainContent(props) {
+import Image from '../components/Image';
+function MainCamera (props) {
   return (
     <>
       <Header />
       <MenuBar />
-      <Slider />
+      
       {props.children}
+      
       <ShoppingTrends />
       <Footer/>
     </>
   );
 }
 
-export default MainContent
+export default MainCamera;

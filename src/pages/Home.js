@@ -8,9 +8,6 @@ import Logo1 from "../static/image/Logo-Laptop3.jpg";
 import Logo2 from "../static/image/Logo-Laptop4.jpg";
 import Logo3 from "../static/image/Logo-Laptop5.jpg";
 import Logo4 from "../static/image/Logo-Laptop6.jpg";
-import product1 from "../static/image/product1.png";
-import product2 from "../static/image/product2.png";
-import product3 from "../static/image/product3.png";
 import Logo5 from "../static/image/slie-khuyenmai.PNG";
 import {apiProducts} from "../api/apiProducts";
 
@@ -32,6 +29,7 @@ function Home() {
 
   }
   console.log(products);
+  console.log(apiProducts);
   useEffect(() => {
     fetchDataProducts();
   }, []);
@@ -351,7 +349,7 @@ function Home() {
           </div>
           <div className="product-gallery-one-content-product">
             <div className="product-gallery-one-content-product-item">
-              <img src={Logo3} alt="" />
+            <Link  to="/subPage1"><a><img className='slider-image' src={Logo3} ></img></a> </Link>
               <div className="slider-product-one-content-item-text">
                 <li><img src="img/icon1.png" alt="" /><p>Trợ giá khuyến mãi</p></li>
                 <li>Laptop Dell Gaming </li>
@@ -689,20 +687,7 @@ function Home() {
         </div>
       </div>
     </section>
-    {/*Category product*/}
-    <section className="Category-product">
-      <div className="container">
-        <div className="shopping-trends">
-          <strong className="name-box">Xu hướng mua sắm</strong>
-          <ul>
-            <li><a><img src={product1} alt="" /><span> Điện thoại</span><strong>Giảm đến 50%</strong></a></li>
-            <li><a><img src={product2} alt="" /><span>Máy Tính</span><strong>Giảm đến 40%</strong></a></li>
-            <li><a><img src={product3} alt="" /><span>Tai-Nghe</span><strong>Giảm đến 30%</strong></a></li>
-            <li><a><img src={product2} alt="" /><span>Phụ Kiện</span><strong>Giảm đến 10%</strong></a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    
     </MainContent>
   )
 }

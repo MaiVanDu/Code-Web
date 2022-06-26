@@ -1,12 +1,10 @@
 import { useRef, useState, useEffect, useContext } from 'react';
-import AuthContext from '../../context/AuthProvider';
 import { apiAuth } from '../../api/apiAuth';
 import { useNavigate} from 'react-router-dom';
 import React from 'react';
 
 function Login() {
 	const navigate = useNavigate();
-	const { setAuth } = useContext(AuthContext);
 	const userRef = useRef();
 	const errRef = useRef();
 	const [email, setEmail] = useState('');

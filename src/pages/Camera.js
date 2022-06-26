@@ -1,27 +1,28 @@
-import MainLaptop from "../Layout/MainLaptop";
-import { faCartArrowDown, faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Laptop from "../static/image/lap2.PNG";
-import Icon1 from "../static/image/icon-lap1.png";
-import Icon2 from "../static/image/icon2-lap2.png";
-import Icon3 from "../static/image/icon3-lap1.png";
+import MainCamera from "../Layout/MainCamera";
 import { Link } from 'react-router-dom';
-import Logo1 from "../static/image/lap1.png";
-import Logo2 from "../static/image/lap2.PNG";
-import Logo3 from "../static/image/lap3.jpg";
-import Logo4 from "../static/image/lap4.jpg";
+import Logo1 from "../static/image/camera1.jpg";
+import Logo2 from "../static/image/camera2.jpg";
+import Logo3 from "../static/image/camera3.jpg";
+import Logo4 from "../static/image/camera4.jpg";
 import Tieude from "../static/image/slide-camera.png";
 
-function Laptopldp() {
-
-  return(
-    <MainLaptop>
-      <div>
-      <section className="product-gallery-one">
+function Camera() {
+    return (
+        < MainCamera>
+        <>
+        <div className="slider-image">
+            <div className="container">
+                <div className='title-laptop'>
+                    <img src={Tieude}  alt=""  />
+                </div>
+            </div>
+        </div>
+         {/* ------------ product gallery--------------*/}
+    <section className="product-gallery-one">
       <div className="container">
         <div className="product-gallery-one-content">
           <div className="product-gallery-one-content-title">
-            <h2>LapTop Bán Chạy Nhất</h2>
+            <h2>Camera Bán Chạy Nhất</h2>
             <ul>
               <li><a>Camera Imou</a></li>
               <li><a>Camera Ezviz</a></li>
@@ -312,9 +313,8 @@ function Laptopldp() {
 
         > Xem Thêm</button>
       </div></section>
-
-      </div>
-    </MainLaptop>
-  )
+        </>
+        </MainCamera>
+    )
 }
-export default Laptopldp;
+export default Camera;
